@@ -1,7 +1,7 @@
 clear, close all; clc;
 
 % Create B
-B= % ADD YOUR CODE HERE
+B= randi(10, 9, 9);
 
 % Define and display C
 C= tril(B);
@@ -10,10 +10,10 @@ fprintf('Matrix C: \n');
 disp(C)
 
 % Build (9x1) vector of ones
-x = % ADD YOUR CODE HERE 
+x = ones(9,1);
 
 % Compute product of C by x
-y= % ADD YOUR CODE HERE 
+y= C*x;
 
 fprintf('y=\n');
 disp(y)
