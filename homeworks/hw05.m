@@ -10,17 +10,18 @@ A = [10 -7  1   4  6; ...
 % Question a)
 % Compute and display REF of A
 fprintf('reduced echelon form of A\n');
-% ADD YOUR CODE HERE
+R = rref(A);
+disp(R)
 
 % Add your comments here
 
 % Question b)
 % let's start by deleting the first column
-B=% ADD YOUR CODE HERE
+B = A(:,2:5);
 
 % Compute and dsiplay the REF of the new matrix
 fprintf('reduced echelon form of A(:,2:5)\n');
-% ADD YOUR CODE HERE
+disp(rref(B));
 
 % Add your comments here
 
@@ -29,6 +30,12 @@ fprintf('reduced echelon form of A(:,2:5)\n');
 % checking the resulting REF in each case. For more advanced students, you
 % may use a for loop for doing that. 
 
-% ADD YOUR CODE HERE
+for i = 1:5
+    C = A;
+    C(:,i) = [];
+
+    fprintf('RREF after deleting column %d:\n',i);
+    disp(rref(C));
+end
 
 % Add your comments here
