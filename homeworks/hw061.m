@@ -2,15 +2,17 @@ clear, close all; clc;
 
 for n = 4:6
     % Build tridiagonal matrix
-    A1 = % ADD YOUR CODE HERE
-    A2 = % ADD YOUR CODE HERE
-    A3 = % ADD YOUR CODE HERE
+    A1 = diag(3*ones(n,1));
+    A2 = diag(-2*ones(n-1,1),1);
+    A3 = diag(-1*ones(n-1,1),-1);
 
-    A =  % ADD YOUR CODE HERE
+    A =  A1 + A2 + A3;
     
-    % compute determinant of A
-    % using the det command
-    detA = % ADD YOUR CODE HERE
+   fprintf('n = %d\n',n);
+    disp('A1 ='); disp(A1);
+    disp('A2 ='); disp(A2);
+    disp('A3 ='); disp(A3);
+    disp('A ='); disp(A);
     
     fprintf('determinant of matrix A:\n'); disp(detA);
 end
